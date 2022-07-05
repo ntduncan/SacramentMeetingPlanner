@@ -16328,8 +16328,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Index.cshtml",
+      "TargetPath": "Views\\SacramentMetingPrograms\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Create.cshtml",
+      "TargetPath": "Views\\SacramentMetingPrograms\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Delete.cshtml",
+      "TargetPath": "Views\\SacramentMetingPrograms\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Edit.cshtml",
+      "TargetPath": "Views\\SacramentMetingPrograms\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Details.cshtml",
+      "TargetPath": "Views\\SacramentMetingPrograms\\Details.cshtml",
       "FileKind": "mvc"
     }
   ],

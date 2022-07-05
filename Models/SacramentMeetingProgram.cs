@@ -32,9 +32,21 @@ namespace SacramentMeetingPlanner.Models
         public String ClosingPrayer { get; set; }
 
         public ICollection<Speaker> Speakers { get; set; }
-        public int MusicalNumbersID { get; set; }
         
-        public MusicalNumbers MusicalNumbers { get; set; }
+        [Required]
+        public int OpeningHymnID { get; set; }
+        public Hymn OpeningHymn { get; set; }
+        
+        [Required]
+        public int ClosingHymnID { get; set; }
+        public Hymn ClosingHymn { get; set; }
+
+        [Required]
+        public int SacramentHymnID { get; set; }
+        public Hymn SacramentHymn { get; set; }
+
+        public int? IntermediateHymnID { get; set; }
+        public Hymn? IntermediateHymn { get; set; }
 
     }
 }

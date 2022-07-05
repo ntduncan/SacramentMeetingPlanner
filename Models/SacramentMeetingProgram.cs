@@ -31,7 +31,7 @@ namespace SacramentMeetingPlanner.Models
         [StringLength(50, ErrorMessage = "Field cannot exceed 50 characters")]
         public String ClosingPrayer { get; set; }
 
-        public List<String> Speakers { get; set; }
+        public ICollection<Speaker> Speakers { get; set; }
         public int MusicalNumbersID { get; set; }
         
         public MusicalNumbers MusicalNumbers { get; set; }

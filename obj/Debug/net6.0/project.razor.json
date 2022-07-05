@@ -16298,6 +16298,11 @@
   "RootNamespace": "SacramentMeetingPlanner",
   "Documents": [
     {
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Delete.cshtml",
+      "TargetPath": "Views\\SacramentMeetingPrograms\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -16328,33 +16333,28 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Index.cshtml",
-      "TargetPath": "Views\\SacramentMetingPrograms\\Index.cshtml",
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Edit.cshtml",
+      "TargetPath": "Views\\SacramentMeetingPrograms\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Create.cshtml",
-      "TargetPath": "Views\\SacramentMetingPrograms\\Create.cshtml",
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Create.cshtml",
+      "TargetPath": "Views\\SacramentMeetingPrograms\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Delete.cshtml",
-      "TargetPath": "Views\\SacramentMetingPrograms\\Delete.cshtml",
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Index.cshtml",
+      "TargetPath": "Views\\SacramentMeetingPrograms\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Details.cshtml",
+      "TargetPath": "Views\\SacramentMeetingPrograms\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Edit.cshtml",
-      "TargetPath": "Views\\SacramentMetingPrograms\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMetingPrograms/Details.cshtml",
-      "TargetPath": "Views\\SacramentMetingPrograms\\Details.cshtml",
       "FileKind": "mvc"
     }
   ],

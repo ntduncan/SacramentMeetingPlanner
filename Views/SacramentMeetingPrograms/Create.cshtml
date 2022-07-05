@@ -1,0 +1,64 @@
+﻿@model SacramentMeetingPlanner.Models.SacramentMeetingProgram
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SacramentMeetingProgram</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConductingLeader" class="control-label"></label>
+                <input asp-for="ConductingLeader" class="form-control" />
+                <span asp-validation-for="ConductingLeader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningPrayer" class="control-label"></label>
+                <input asp-for="OpeningPrayer" class="form-control" />
+                <span asp-validation-for="OpeningPrayer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClosingPrayer" class="control-label"></label>
+                <input asp-for="ClosingPrayer" class="form-control" />
+                <span asp-validation-for="ClosingPrayer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningHymnID" class="control-label"></label>
+                <select asp-for="OpeningHymnID" class ="form-control" asp-items="ViewBag.OpeningHymnID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClosingHymnID" class="control-label"></label>
+                <select asp-for="ClosingHymnID" class ="form-control" asp-items="ViewBag.ClosingHymnID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SacramentHymnID" class="control-label"></label>
+                <select asp-for="SacramentHymnID" class ="form-control" asp-items="ViewBag.SacramentHymnID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IntermediateHymnID" class="control-label"></label>
+                <select asp-for="IntermediateHymnID" class ="form-control" asp-items="ViewBag.IntermediateHymnID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

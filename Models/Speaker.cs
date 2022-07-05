@@ -15,7 +15,6 @@ namespace SacramentMeetingPlanner.Models
         public string Name { get; set; }
 
         [Required]
-        [Display(Name = "Speaker")]
         [StringLength(50, ErrorMessage = "Field cannot exceed 50 characters")]
         public string Topic { get; set; }
     }

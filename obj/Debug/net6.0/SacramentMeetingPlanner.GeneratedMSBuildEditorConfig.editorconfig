@@ -23,6 +23,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Tanner/source/repos/SacramentMeetingPlanner/Views/Hymns/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tanner/source/repos/SacramentMeetingPlanner/Views/Hymns/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tanner/source/repos/SacramentMeetingPlanner/Views/Hymns/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tanner/source/repos/SacramentMeetingPlanner/Views/Hymns/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tanner/source/repos/SacramentMeetingPlanner/Views/Hymns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tanner/source/repos/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

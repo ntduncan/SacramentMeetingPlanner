@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,4 +13,6 @@ using SacramentMeetingPlanner.Models;
         }
 
         public DbSet<SacramentMeetingPlanner.Models.SacramentMeetingProgram>? SacramentMeetingProgram { get; set; }
+
+        public DbSet<SacramentMeetingPlanner.Models.Hymn>? Hymn { get; set; }
     }

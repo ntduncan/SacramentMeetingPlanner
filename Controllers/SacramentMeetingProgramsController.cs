@@ -50,10 +50,10 @@ namespace SacramentMeetingPlanner.Controllers
         // GET: SacramentMeetingPrograms/Create
         public IActionResult Create()
         {
-            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID");
-            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID");
-            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID");
-            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID");
+            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn");
+            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn");
+            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn");
+            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn");
             return View();
         }
 

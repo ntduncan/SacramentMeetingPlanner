@@ -9,20 +9,20 @@ namespace SacramentMeetingPlanner.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Hymn",
-                columns: table => new
-                {
-                    HymnID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    HymnNumber = table.Column<int>(type: "INTEGER", nullable: false),
-                    HymnTitle = table.Column<string>(type: "TEXT", nullable: false),
-                    HymnType = table.Column<string>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Hymn", x => x.HymnID);
-                });
+            //migrationBuilder.CreateTable(
+            //    name: "Hymn",
+            //    columns: table => new
+            //    {
+            //        HymnID = table.Column<int>(type: "INTEGER", nullable: false)
+            //            .Annotation("Sqlite:Autoincrement", true),
+            //        HymnNumber = table.Column<int>(type: "INTEGER", nullable: false),
+            //        HymnTitle = table.Column<string>(type: "TEXT", nullable: false),
+            //        HymnType = table.Column<string>(type: "TEXT", nullable: false)
+            //    },
+            //    constraints: table =>
+            //    {
+            //        table.PrimaryKey("PK_Hymn", x => x.HymnID);
+            //    });
 
             migrationBuilder.CreateTable(
                 name: "SacramentMeetingProgram",

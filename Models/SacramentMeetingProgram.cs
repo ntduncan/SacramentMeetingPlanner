@@ -34,17 +34,20 @@ namespace SacramentMeetingPlanner.Models
         public ICollection<Speaker> Speakers { get; set; }
         
         [Required]
+        [Display(Name = "Opening Hymn")]
         public int OpeningHymnID { get; set; }
         public Hymn OpeningHymn { get; set; }
         
         [Required]
+        [Display(Name = "Closing Hymn")]
         public int ClosingHymnID { get; set; }
         public Hymn ClosingHymn { get; set; }
 
         [Required]
+        [Display(Name = "Sacrament Hymn")]
         public int SacramentHymnID { get; set; }
         public Hymn SacramentHymn { get; set; }
-
+        [Display(Name = "Intermediate Hymn")]
         public int? IntermediateHymnID { get; set; }
         public Hymn? IntermediateHymn { get; set; }
 

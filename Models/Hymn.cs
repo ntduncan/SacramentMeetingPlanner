@@ -8,5 +8,6 @@ namespace SacramentMeetingPlanner.Models
         public int HymnNumber { get; set; }
         public string HymnTitle { get; set; }
         public string HymnType { get; set; }
+        public string DisplayHymn => $"{HymnNumber} - {HymnTitle}";
     }
 }

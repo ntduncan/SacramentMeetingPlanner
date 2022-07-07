@@ -8,6 +8,7 @@ namespace SacramentMeetingPlanner.Models
     public class Speaker
     {
         public int SpeakerID { get; set; }
+        public int SacramentMeetingProgramID { get; set; }
 
         [Required]
         [Display(Name = "Speaker")]
@@ -17,5 +18,6 @@ namespace SacramentMeetingPlanner.Models
         [Required]
         [StringLength(50, ErrorMessage = "Field cannot exceed 50 characters")]
         public string Topic { get; set; }
+        
     }
 }

@@ -64,6 +64,7 @@ namespace SacramentMeetingPlanner.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("SacramentMeetingProgramID,Date,ConductingLeader,OpeningPrayer,ClosingPrayer,OpeningHymnID,ClosingHymnID,SacramentHymnID,IntermediateHymnID")] SacramentMeetingProgram sacramentMeetingProgram)
         {
+            Console.WriteLine(sacramentMeetingProgram.SacramentMeetingProgramID);
             if (ModelState.IsValid)
             {
                 _context.Add(sacramentMeetingProgram);
@@ -85,15 +86,24 @@ namespace SacramentMeetingPlanner.Controllers
                 return NotFound();
             }
 
-            var sacramentMeetingProgram = await _context.SacramentMeetingProgram.FindAsync(id);
+                var sacramentMeetingProgram = await _context.SacramentMeetingProgram
+                .Include(s => s.ClosingHymn)
+                .Include(s => s.IntermediateHymn)
+                .Include(s => s.OpeningHymn)
+                .Include(s => s.SacramentHymn)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.SacramentMeetingProgramID == id);
+
             if (sacramentMeetingProgram == null)
             {
                 return NotFound();
             }
+
             ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.ClosingHymnID);
             ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.IntermediateHymnID);
             ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.OpeningHymnID);
             ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.SacramentHymnID);
+            
             return View(sacramentMeetingProgram);
         }
 
@@ -108,6 +118,19 @@ namespace SacramentMeetingPlanner.Controllers
             {
                 return NotFound();
             }
+
+            if (sacramentMeetingProgram == null)
+            {
+                return NotFound();
+            }
+
+            sacramentMeetingProgram = await _context.SacramentMeetingProgram
+                .Include(s => s.ClosingHymn)
+                .Include(s => s.IntermediateHymn)
+                .Include(s => s.OpeningHymn)
+                .Include(s => s.SacramentHymn)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.SacramentMeetingProgramID == id);
 
             if (ModelState.IsValid)
             {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y6CLqSFFig73LVEthEmuW+F+dTdY5sOg9XvtTnWB308=",
+  "Hash": "u5m8NI2JUIAx36czUxX3fexie89XnsOsSqcoQskbw0A=",
   "Source": "SacramentMeetingPlanner",
   "BasePath": "_content/SacramentMeetingPlanner",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/wwwroot/logo.png",
+      "SourceId": "SacramentMeetingPlanner",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/wwwroot/",
+      "BasePath": "_content/SacramentMeetingPlanner",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/logo.png"
     }
   ]
 }

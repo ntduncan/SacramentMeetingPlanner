@@ -65,8 +65,19 @@ namespace SacramentMeetingPlanner.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("SacramentMeetingProgramID,Date,ConductingLeader,OpeningPrayer,ClosingPrayer,OpeningHymnID,ClosingHymnID,SacramentHymnID,IntermediateHymnID")] SacramentMeetingProgram sacramentMeetingProgram)
         {
+            // if (speakers != null)
+            // {
+            //     sacramentMeetingProgram.Speakers = new List<Speaker>();
+            //     foreach (var person in speakers)
+            //     {
+            //         var speaker = new Speaker { SacramentMeetingProgramID = sacramentMeetingProgram.SacramentMeetingProgramID, Name = person.Name, Topic = person.Topic };
+            //         sacramentMeetingProgram.Speakers.Add(speaker);
+            //     }
+            // }
+
             if (ModelState.IsValid)
             {
+                
                 _context.Add(sacramentMeetingProgram);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -75,6 +86,7 @@ namespace SacramentMeetingPlanner.Controllers
             ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.IntermediateHymnID);
             ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.OpeningHymnID);
             ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.SacramentHymnID);
+            
             return View(sacramentMeetingProgram);
         }
 

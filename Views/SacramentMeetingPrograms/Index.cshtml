@@ -55,16 +55,16 @@
                 @Html.DisplayFor(modelItem => item.ClosingPrayer)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.OpeningHymn.HymnID)
+               @Html.DisplayFor(modelItem => item.OpeningHymn.HymnID). @Html.DisplayFor(modelItem => item.OpeningHymn.HymnTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClosingHymn.HymnID)
+                @Html.DisplayFor(modelItem => item.ClosingHymn.HymnID). @Html.DisplayFor(modelItem => item.ClosingHymn.HymnTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SacramentHymn.HymnID)
+                @Html.DisplayFor(modelItem => item.SacramentHymn.HymnID). @Html.DisplayFor(modelItem => item.SacramentHymn.HymnTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IntermediateHymn.HymnID)
+                @Html.DisplayFor(modelItem => item.IntermediateHymn.HymnID). @Html.DisplayFor(modelItem => item.IntermediateHymn.HymnTitle)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.SacramentMeetingProgramID">Edit</a> |

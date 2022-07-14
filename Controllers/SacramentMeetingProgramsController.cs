@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SacramentMeetingPlanner.Models;
+using SacramentMeetingPlanner.Models.ViewModels;
 
 namespace SacramentMeetingPlanner.Controllers
 {
@@ -55,7 +56,7 @@ namespace SacramentMeetingPlanner.Controllers
             ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn");
             ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn");
             ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn");
-            return View();
+            return View(new SacramentMeetingPlannerViewModel());
         }
 
         // POST: SacramentMeetingPrograms/Create
@@ -63,31 +64,37 @@ namespace SacramentMeetingPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SacramentMeetingProgramID,Date,ConductingLeader,OpeningPrayer,ClosingPrayer,OpeningHymnID,ClosingHymnID,SacramentHymnID,IntermediateHymnID")] SacramentMeetingProgram sacramentMeetingProgram)
+        public async Task<IActionResult> Create([Bind("speakers,sacramentMeetingProgram")] SacramentMeetingPlannerViewModel sacramentMeetingProgramViewModel)
         {
-            // if (speakers != null)
-            // {
-            //     sacramentMeetingProgram.Speakers = new List<Speaker>();
-            //     foreach (var person in speakers)
-            //     {
-            //         var speaker = new Speaker { SacramentMeetingProgramID = sacramentMeetingProgram.SacramentMeetingProgramID, Name = person.Name, Topic = person.Topic };
-            //         sacramentMeetingProgram.Speakers.Add(speaker);
-            //     }
-            // }
+            //if (sacramentMeetingProgramViewModel.speakers != null)
+            //{
+            //    foreach (var person in speakers)
+            //    {
+            //        var speaker = new Speaker { SacramentMeetingProgramID = sacramentMeetingProgram.SacramentMeetingProgramID, Name = person.Name, Topic = person.Topic };
+            //        sacramentMeetingProgram.Speakers.Add(speaker);
+            //    }
+            //}
 
             if (ModelState.IsValid)
             {
-                
-                _context.Add(sacramentMeetingProgram);
+                _context.SacramentMeetingProgram.Add(sacramentMeetingProgramViewModel.sacramentMeetingProgram);
+                await _context.SaveChangesAsync();
+
+                foreach (var speaker in sacramentMeetingProgramViewModel.speakers)
+                {
+                    speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.sacramentMeetingProgram.SacramentMeetingProgramID;
+                    _context.Speaker.Add(sacramentMeetingProgramViewModel.speakers[0]);
+
+                }
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.ClosingHymnID);
-            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.IntermediateHymnID);
-            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.OpeningHymnID);
-            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.SacramentHymnID);
+            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.sacramentMeetingProgram.ClosingHymnID);
+            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.sacramentMeetingProgram.IntermediateHymnID);
+            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.sacramentMeetingProgram.OpeningHymnID);
+            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.sacramentMeetingProgram.SacramentHymnID);
             
-            return View(sacramentMeetingProgram);
+            return View(sacramentMeetingProgramViewModel);
         }
 
         // GET: SacramentMeetingPrograms/Edit/5

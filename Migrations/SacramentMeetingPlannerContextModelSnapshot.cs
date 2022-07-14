@@ -14,7 +14,7 @@ namespace SacramentMeetingPlanner.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "6.0.6");
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
 
             modelBuilder.Entity("SacramentMeetingPlanner.Models.Hymn", b =>
                 {

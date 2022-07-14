@@ -11,11 +11,12 @@ namespace SacramentMeetingPlanner.Models
         public int SacramentMeetingProgramID { get; set; }
 
         [Required]
-        [Display(Name = "Speaker")]
+        [Display(Name = "Speaker Name")]
         [StringLength(50, ErrorMessage = "Field cannot exceed 50 characters")]
         public string Name { get; set; }
 
         [Required]
+        [Display(Name="Speaker Topic")]
         [StringLength(50, ErrorMessage = "Field cannot exceed 50 characters")]
         public string Topic { get; set; }
         

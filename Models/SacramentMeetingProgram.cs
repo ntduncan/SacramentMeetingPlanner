@@ -31,22 +31,22 @@ namespace SacramentMeetingPlanner.Models
         [StringLength(50, ErrorMessage = "Field cannot exceed 50 characters")]
         public String ClosingPrayer { get; set; }
 
-        public ICollection<Speaker> Speakers { get; set; }
+        public ICollection<Speaker>? Speakers { get; set; }
         
         [Required]
         [Display(Name = "Opening Hymn")]
         public int OpeningHymnID { get; set; }
-        public Hymn OpeningHymn { get; set; }
+        public Hymn? OpeningHymn { get; set; }
         
         [Required]
         [Display(Name = "Closing Hymn")]
         public int ClosingHymnID { get; set; }
-        public Hymn ClosingHymn { get; set; }
+        public Hymn? ClosingHymn { get; set; }
 
         [Required]
         [Display(Name = "Sacrament Hymn")]
         public int SacramentHymnID { get; set; }
-        public Hymn SacramentHymn { get; set; }
+        public Hymn? SacramentHymn { get; set; }
         [Display(Name = "Intermediate Hymn")]
         public int? IntermediateHymnID { get; set; }
         public Hymn? IntermediateHymn { get; set; }

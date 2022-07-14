@@ -1,4 +1,4 @@
-﻿@model SacramentMeetingPlanner.Models.SacramentMeetingProgram
+﻿@model SacramentMeetingPlanner.Models.ViewModels.SacramentMeetingPlannerViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -13,19 +13,19 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
-                <span asp-validation-for="Date" class="text-danger"></span>
+                <label asp-for="sacramentMeetingProgram.Date" class="control-label"></label>
+                <input asp-for="sacramentMeetingProgram.Date" class="form-control" />
+                <span asp-validation-for="sacramentMeetingProgram.Date" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ConductingLeader" class="control-label"></label>
-                <input asp-for="ConductingLeader" class="form-control" />
-                <span asp-validation-for="ConductingLeader" class="text-danger"></span>
+                <label asp-for="sacramentMeetingProgram.ConductingLeader" class="control-label"></label>
+                <input asp-for="sacramentMeetingProgram.ConductingLeader" class="form-control" />
+                <span asp-validation-for="sacramentMeetingProgram.ConductingLeader" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="OpeningPrayer" class="control-label"></label>
-                <input asp-for="OpeningPrayer" class="form-control" />
-                <span asp-validation-for="OpeningPrayer" class="text-danger"></span>
+                <label asp-for="sacramentMeetingProgram.OpeningPrayer" class="control-label"></label>
+                <input asp-for="sacramentMeetingProgram.OpeningPrayer" class="form-control" />
+                <span asp-validation-for="sacramentMeetingProgram.OpeningPrayer" class="text-danger"></span>
             </div>
             @{
                 
@@ -34,33 +34,49 @@
 
             </div>
             <div class="form-group">
-                <label asp-for="ClosingPrayer" class="control-label"></label>
-                <input asp-for="ClosingPrayer" class="form-control" />
-                <span asp-validation-for="ClosingPrayer" class="text-danger"></span>
+                <label asp-for="sacramentMeetingProgram.ClosingPrayer" class="control-label"></label>
+                <input asp-for="sacramentMeetingProgram.ClosingPrayer" class="form-control" />
+                <span asp-validation-for="sacramentMeetingProgram.ClosingPrayer" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="OpeningHymnID" class="control-label"></label>
-                <select asp-for="OpeningHymnID" class ="form-control" asp-items="ViewBag.OpeningHymnID">
+                <label asp-for="sacramentMeetingProgram.OpeningHymnID" class="control-label"></label>
+                <select asp-for="sacramentMeetingProgram.OpeningHymnID" class ="form-control" asp-items="ViewBag.OpeningHymnID">
                     <option value="">-- Choose One --</option>
                 </select>
             </div>
             <div class="form-group">
-                <label asp-for="ClosingHymnID" class="control-label"></label>
-                <select asp-for="ClosingHymnID" class ="form-control" asp-items="ViewBag.ClosingHymnID">
+                <label asp-for="sacramentMeetingProgram.ClosingHymnID" class="control-label"></label>
+                <select asp-for="sacramentMeetingProgram.ClosingHymnID" class ="form-control" asp-items="ViewBag.ClosingHymnID">
                     <option value="">-- Choose One --</option>
                 </select>
             </div>
             <div class="form-group">
-                <label asp-for="SacramentHymnID" class="control-label"></label>
-                <select asp-for="SacramentHymnID" class ="form-control" asp-items="ViewBag.SacramentHymnID">
+                <label asp-for="sacramentMeetingProgram.SacramentHymnID" class="control-label"></label>
+                <select asp-for="sacramentMeetingProgram.SacramentHymnID" class ="form-control" asp-items="ViewBag.SacramentHymnID">
                     <option value="">-- Choose One --</option>
                 </select>
             </div>
             <div class="form-group">
-                <label asp-for="IntermediateHymnID" class="control-label"></label>
-                <select asp-for="IntermediateHymnID" class ="form-control" asp-items="ViewBag.IntermediateHymnID">
+                <label asp-for="sacramentMeetingProgram.IntermediateHymnID" class="control-label"></label>
+                <select asp-for="sacramentMeetingProgram.IntermediateHymnID" class ="form-control" asp-items="ViewBag.IntermediateHymnID">
                     <option value="">-- Choose One --</option>
                 </select>
+            </div>
+            <hr />
+            <div id="SpeakersDiv" class="form-group">
+                @*TODO make form for Speakers*@
+                <div class="col-md-12"><a class="btn btn-secondary" id="AddSpeakerBtn">Add Speaker <i class="fa fa-plus"></i></a></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label asp-for="speakers[0].Name" class="control-label"></label>
+                        <input type="text" class="form-text" asp-for="speakers[0].Name" />
+                    </div>
+                    <div class="col-md-12">
+                        <label asp-for="speakers[0].Topic" class="control-label"></label>
+                        <input type="text" class="form-text" asp-for="speakers[0].Topic" />
+                    </div>
+                </div>
+                
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

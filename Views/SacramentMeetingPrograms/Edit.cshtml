@@ -54,20 +54,29 @@
                 <span asp-validation-for="IntermediateHymnID" class="text-danger"></span>
             </div>
 
-            @* <div id="SpeakersDiv" class="form-group">
+            @{
+                foreach(Speaker speaker in Model.Speakers)
+                 {
+                    <div class="col-md-12">
+                        <label asp-for="@speaker.Name" class="control-label"></label>
+                        <input type="text" class="form-text" asp-for="@speaker.Name" />
+                    </div>
+                    <div class="col-md-12">
+                        <label asp-for="@speaker.Topic" class="control-label"></label>
+                        <input type="text" class="form-text" asp-for="@speaker.Topic" />
+                    </div> 
+                 }
+            }
+            <div id="SpeakersDiv" class="form-group">
                
                 <div class="col-md-12"><a class="btn btn-secondary" id="AddSpeakerBtn">Add Speaker <i class="fa fa-plus"></i></a></div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <label asp-for="sacramentMeetingProgram.Speakers[0].Name" class="control-label"></label>
-                        <input type="text" class="form-text" asp-for="sacramentMeetingProgram.Speakers[0].Name" />
-                    </div>
-                    <div class="col-md-12">
-                        <label asp-for="sacramentMeetingProgram.Speakers[0].Topic" class="control-label"></label>
-                        <input type="text" class="form-text" asp-for="sacramentMeetingProgram.Speakers[0].Topic" />
-                    </div>SacramentMeetingProgram.
+
+                  
                 </div>
-            </div> *@
+            </div>
+            }
+
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

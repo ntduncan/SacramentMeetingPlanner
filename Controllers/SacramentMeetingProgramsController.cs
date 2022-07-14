@@ -102,10 +102,11 @@ namespace SacramentMeetingPlanner.Controllers
                 .Include(s => s.IntermediateHymn)
                 .Include(s => s.OpeningHymn)
                 .Include(s => s.SacramentHymn)
-                .Include(s => s.Speakers)
-                //.ThenInclude(s => s.Speaker)
+                .Include(s => s.Speakers)//.ThenInclude(s => s.Speaker)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.SacramentMeetingProgramID == id);
+
+                // List<Speaker> speakers = await _context.Speaker.Where(s => s.SacramentMeetingProgramID == id).ToListAsync();
 
             if (sacramentMeetingProgram == null)
             {

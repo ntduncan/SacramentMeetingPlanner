@@ -8,77 +8,77 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SacramentMeetingPlanner
 build_property.RootNamespace = SacramentMeetingPlanner
-build_property.ProjectDir = C:\Users\Tanner\Source\Repos\SacramentMeetingPlanner\
+build_property.ProjectDir = /Users/nathanduncan/Desktop/SacramentMeetingPlanner/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Tanner\Source\Repos\SacramentMeetingPlanner
+build_property.MSBuildProjectDirectory = /Users/nathanduncan/Desktop/SacramentMeetingPlanner
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Hymns/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcQ3JlYXRlLmNzaHRtbA==
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Hymns/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcRGVsZXRlLmNzaHRtbA==
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Hymns/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcRGV0YWlscy5jc2h0bWw=
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Hymns/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcRWRpdC5jc2h0bWw=
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Hymns/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHltbnNcSW5kZXguY3NodG1s
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zXENyZWF0ZS5jc2h0bWw=
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zXERlbGV0ZS5jc2h0bWw=
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zXERldGFpbHMuY3NodG1s
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zXEVkaXQuY3NodG1s
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zXEluZGV4LmNzaHRtbA==
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tanner/Source/Repos/SacramentMeetingPlanner/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-g4ryonuc05
+[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-nouse2mjmv

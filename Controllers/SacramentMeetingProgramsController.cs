@@ -66,14 +66,6 @@ namespace SacramentMeetingPlanner.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("speakers,sacramentMeetingProgram")] SacramentMeetingPlannerViewModel sacramentMeetingProgramViewModel)
         {
-            //if (sacramentMeetingProgramViewModel.speakers != null)
-            //{
-            //    foreach (var person in speakers)
-            //    {
-            //        var speaker = new Speaker { SacramentMeetingProgramID = sacramentMeetingProgram.SacramentMeetingProgramID, Name = person.Name, Topic = person.Topic };
-            //        sacramentMeetingProgram.Speakers.Add(speaker);
-            //    }
-            //}
 
             if (ModelState.IsValid)
             {
@@ -110,6 +102,8 @@ namespace SacramentMeetingPlanner.Controllers
                 .Include(s => s.IntermediateHymn)
                 .Include(s => s.OpeningHymn)
                 .Include(s => s.SacramentHymn)
+                .Include(s => s.Speakers)
+                //.ThenInclude(s => s.Speaker)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.SacramentMeetingProgramID == id);
 
@@ -131,8 +125,10 @@ namespace SacramentMeetingPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SacramentMeetingProgramID,Date,ConductingLeader,OpeningPrayer,ClosingPrayer,OpeningHymnID,ClosingHymnID,SacramentHymnID,IntermediateHymnID")] SacramentMeetingProgram sacramentMeetingProgram)
+        public async Task<IActionResult> Edit(int id, [Bind("speakers,sacramentMeetingProgram")] SacramentMeetingPlannerViewModel sacramentMeetingProgramViewModel)
         {
+            var sacramentMeetingProgram = sacramentMeetingProgramViewModel.sacramentMeetingProgram;
+
             if (id != sacramentMeetingProgram.SacramentMeetingProgramID)
             {
                 return NotFound();
@@ -141,6 +137,15 @@ namespace SacramentMeetingPlanner.Controllers
             if (sacramentMeetingProgram == null)
             {
                 return NotFound();
+            }
+
+            if(sacramentMeetingProgramViewModel.speakers != null)
+            {
+                foreach (var speaker in sacramentMeetingProgramViewModel.speakers)
+                {
+                    speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.sacramentMeetingProgram.SacramentMeetingProgramID;
+                    _context.Speaker.Add(sacramentMeetingProgramViewModel.speakers[0]);
+                }
             }
 
             if(sacramentMeetingProgram.OpeningHymnID != null && sacramentMeetingProgram.ClosingHymnID != null && sacramentMeetingProgram.SacramentHymnID != null)

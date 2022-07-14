@@ -2,7 +2,7 @@
 {
     public class SacramentMeetingPlannerViewModel
     {
-        public List<Speaker> speakers { get; set; }
-        public SacramentMeetingProgram sacramentMeetingProgram { get; set; }
+        public List<Speaker> Speakers { get; set; }
+        public SacramentMeetingProgram SacramentMeetingProgram { get; set; }
     }
 }

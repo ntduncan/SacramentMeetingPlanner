@@ -69,22 +69,22 @@ namespace SacramentMeetingPlanner.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.SacramentMeetingProgram.Add(sacramentMeetingProgramViewModel.sacramentMeetingProgram);
+                _context.SacramentMeetingProgram.Add(sacramentMeetingProgramViewModel.SacramentMeetingProgram);
                 await _context.SaveChangesAsync();
 
-                foreach (var speaker in sacramentMeetingProgramViewModel.speakers)
+                foreach (var speaker in sacramentMeetingProgramViewModel.Speakers)
                 {
-                    speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.sacramentMeetingProgram.SacramentMeetingProgramID;
-                    _context.Speaker.Add(sacramentMeetingProgramViewModel.speakers[0]);
+                    speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID;
+                    _context.Speaker.Add(sacramentMeetingProgramViewModel.Speakers[0]);
 
                 }
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.sacramentMeetingProgram.ClosingHymnID);
-            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.sacramentMeetingProgram.IntermediateHymnID);
-            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.sacramentMeetingProgram.OpeningHymnID);
-            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.sacramentMeetingProgram.SacramentHymnID);
+            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.SacramentMeetingProgram.ClosingHymnID);
+            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.SacramentMeetingProgram.IntermediateHymnID);
+            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.SacramentMeetingProgram.OpeningHymnID);
+            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentHymnID);
             
             return View(sacramentMeetingProgramViewModel);
         }
@@ -127,7 +127,7 @@ namespace SacramentMeetingPlanner.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("speakers,sacramentMeetingProgram")] SacramentMeetingPlannerViewModel sacramentMeetingProgramViewModel)
         {
-            var sacramentMeetingProgram = sacramentMeetingProgramViewModel.sacramentMeetingProgram;
+            var sacramentMeetingProgram = sacramentMeetingProgramViewModel.SacramentMeetingProgram;
 
             if (id != sacramentMeetingProgram.SacramentMeetingProgramID)
             {
@@ -139,12 +139,12 @@ namespace SacramentMeetingPlanner.Controllers
                 return NotFound();
             }
 
-            if(sacramentMeetingProgramViewModel.speakers != null)
+            if(sacramentMeetingProgramViewModel.Speakers != null)
             {
-                foreach (var speaker in sacramentMeetingProgramViewModel.speakers)
+                foreach (var speaker in sacramentMeetingProgramViewModel.Speakers)
                 {
-                    speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.sacramentMeetingProgram.SacramentMeetingProgramID;
-                    _context.Speaker.Add(sacramentMeetingProgramViewModel.speakers[0]);
+                    speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID;
+                    _context.Speaker.Add(sacramentMeetingProgramViewModel.Speakers[0]);
                 }
             }
 

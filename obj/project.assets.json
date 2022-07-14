@@ -9863,24 +9863,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/nathanduncan/.nuget/packages/": {}
+    "C:\\Users\\Tanner\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner.csproj",
+      "projectUniqueName": "C:\\Users\\Tanner\\Source\\Repos\\SacramentMeetingPlanner\\SacramentMeetingPlanner.csproj",
       "projectName": "SacramentMeetingPlanner",
-      "projectPath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner.csproj",
-      "packagesPath": "/Users/nathanduncan/.nuget/packages/",
-      "outputPath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/obj/",
+      "projectPath": "C:\\Users\\Tanner\\Source\\Repos\\SacramentMeetingPlanner\\SacramentMeetingPlanner.csproj",
+      "packagesPath": "C:\\Users\\Tanner\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tanner\\Source\\Repos\\SacramentMeetingPlanner\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/nathanduncan/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Tanner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9942,7 +9949,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

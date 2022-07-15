@@ -97,6 +97,7 @@ namespace SacramentMeetingPlanner.Controllers
                 return NotFound();
             }
 
+
                 var sacramentMeetingProgram = await _context.SacramentMeetingProgram
                 .Include(s => s.ClosingHymn)
                 .Include(s => s.IntermediateHymn)
@@ -106,7 +107,8 @@ namespace SacramentMeetingPlanner.Controllers
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.SacramentMeetingProgramID == id);
 
-                // List<Speaker> speakers = await _context.Speaker.Where(s => s.SacramentMeetingProgramID == id).ToListAsync();
+                
+                List<Speaker> speakers = await _context.Speaker.Where(s => s.SacramentMeetingProgramID == id).ToListAsync();
 
             if (sacramentMeetingProgram == null)
             {
@@ -118,7 +120,11 @@ namespace SacramentMeetingPlanner.Controllers
             ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.OpeningHymnID);
             ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.SacramentHymnID);
             
-            return View(sacramentMeetingProgram);
+            return View(new SacramentMeetingPlannerViewModel()
+            {
+                SacramentMeetingProgram = sacramentMeetingProgram,
+                Speakers = speakers
+            });
         }
 
         // POST: SacramentMeetingPrograms/Edit/5
@@ -126,48 +132,42 @@ namespace SacramentMeetingPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("speakers,sacramentMeetingProgram")] SacramentMeetingPlannerViewModel sacramentMeetingProgramViewModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Speakers,SacramentMeetingProgram")] SacramentMeetingPlannerViewModel sacramentMeetingProgramViewModel)
         {
-            var sacramentMeetingProgram = sacramentMeetingProgramViewModel.SacramentMeetingProgram;
-
-            if (id != sacramentMeetingProgram.SacramentMeetingProgramID)
+            if (id != sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID)
             {
                 return NotFound();
             }
 
-            if (sacramentMeetingProgram == null)
-            {
-                return NotFound();
-            }
 
-            if(sacramentMeetingProgramViewModel.Speakers != null)
+            if(sacramentMeetingProgramViewModel.SacramentMeetingProgram.OpeningHymnID > 0 && sacramentMeetingProgramViewModel.SacramentMeetingProgram.ClosingHymnID > 0 && sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentHymnID > 0)
             {
-                foreach (var speaker in sacramentMeetingProgramViewModel.Speakers)
+                sacramentMeetingProgramViewModel.SacramentMeetingProgram.OpeningHymn = await _context.Hymn.FindAsync(sacramentMeetingProgramViewModel.SacramentMeetingProgram.OpeningHymnID);
+                sacramentMeetingProgramViewModel.SacramentMeetingProgram.ClosingHymn = await _context.Hymn.FindAsync(sacramentMeetingProgramViewModel.SacramentMeetingProgram.ClosingHymnID);
+                sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentHymn = await _context.Hymn.FindAsync(sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentHymnID);
+                if(sacramentMeetingProgramViewModel.SacramentMeetingProgram.IntermediateHymnID != null) 
                 {
-                    speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID;
-                    _context.Speaker.Add(sacramentMeetingProgramViewModel.Speakers[0]);
+                    sacramentMeetingProgramViewModel.SacramentMeetingProgram.IntermediateHymn = await _context.Hymn.FindAsync(sacramentMeetingProgramViewModel.SacramentMeetingProgram.IntermediateHymnID);
                 }
+
             }
 
-            if(sacramentMeetingProgram.OpeningHymnID != null && sacramentMeetingProgram.ClosingHymnID != null && sacramentMeetingProgram.SacramentHymnID != null)
+            if (ModelState.IsValid)
             {
-                sacramentMeetingProgram.OpeningHymn = await _context.Hymn.FindAsync(sacramentMeetingProgram.OpeningHymnID);
-                sacramentMeetingProgram.ClosingHymn = await _context.Hymn.FindAsync(sacramentMeetingProgram.ClosingHymnID);
-                sacramentMeetingProgram.SacramentHymn = await _context.Hymn.FindAsync(sacramentMeetingProgram.SacramentHymnID);
-                if(sacramentMeetingProgram.IntermediateHymnID != null) sacramentMeetingProgram.IntermediateHymn = await _context.Hymn.FindAsync(sacramentMeetingProgram.IntermediateHymnID);
-
-            }
-
-            // if (ModelState.IsValid)
-            // {
                 try
                 {
-                    _context.Update(sacramentMeetingProgram);
+                    _context.Update(sacramentMeetingProgramViewModel.SacramentMeetingProgram);
+                    await _context.SaveChangesAsync();
+                    foreach (var speaker in sacramentMeetingProgramViewModel.Speakers)
+                    {
+                        speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID;
+                        _context.Speaker.Add(sacramentMeetingProgramViewModel.Speakers[0]);
+                    }
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SacramentMeetingProgramExists(sacramentMeetingProgram.SacramentMeetingProgramID))
+                    if (!SacramentMeetingProgramExists(sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID))
                     {
                         return NotFound();
                     }
@@ -177,13 +177,10 @@ namespace SacramentMeetingPlanner.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            // }
+            }
 
-            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.ClosingHymnID);
-            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.IntermediateHymnID);
-            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.OpeningHymnID);
-            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.SacramentHymnID);
-            return View(sacramentMeetingProgram);
+            // return RedirectToAction(nameof(Index));
+            return View(sacramentMeetingProgramViewModel);
         }
 
         // GET: SacramentMeetingPrograms/Delete/5

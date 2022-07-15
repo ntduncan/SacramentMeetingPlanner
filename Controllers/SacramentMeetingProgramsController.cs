@@ -158,10 +158,24 @@ namespace SacramentMeetingPlanner.Controllers
                 {
                     _context.Update(sacramentMeetingProgramViewModel.SacramentMeetingProgram);
                     await _context.SaveChangesAsync();
+                    int SacramentMeetingProgramID = sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID;
+
+                    //Remove previous speakers associated with program
+                    var prevSpeakers = _context.Speaker.Where(m => m.SacramentMeetingProgramID == SacramentMeetingProgramID);
+                    if (prevSpeakers.Any())
+                    {
+                        foreach (Speaker prevSpeaker in prevSpeakers)
+                        {
+                            _context.Speaker.Remove(prevSpeaker);
+                        }
+                        await _context.SaveChangesAsync();
+                    }
+
+                    //Add new ones from page to speakers
                     foreach (var speaker in sacramentMeetingProgramViewModel.Speakers)
                     {
-                        speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID;
-                        _context.Speaker.Add(sacramentMeetingProgramViewModel.Speakers[0]);
+                        speaker.SacramentMeetingProgramID = SacramentMeetingProgramID;
+                        _context.Speaker.Add(speaker);;
                     }
                     await _context.SaveChangesAsync();
                 }

@@ -64,10 +64,14 @@ namespace SacramentMeetingPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("speakers,sacramentMeetingProgram")] SacramentMeetingPlannerViewModel sacramentMeetingProgramViewModel)
+        public async Task<IActionResult> Create([Bind("Speakers,SacramentMeetingProgram")] SacramentMeetingPlannerViewModel sacramentMeetingProgramViewModel)
         {
+            if(sacramentMeetingProgramViewModel.Speakers == null)
+            {
+                sacramentMeetingProgramViewModel.Speakers = new List<Speaker>();
+            }
 
-            if (ModelState.IsValid)
+            if (sacramentMeetingProgramViewModel.SacramentMeetingProgram != null && sacramentMeetingProgramViewModel.Speakers != null)
             {
                 _context.SacramentMeetingProgram.Add(sacramentMeetingProgramViewModel.SacramentMeetingProgram);
                 await _context.SaveChangesAsync();

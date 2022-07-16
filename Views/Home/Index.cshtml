@@ -6,33 +6,45 @@
     @* var lastweek = items[items.Length - 1] != null ? items[items.Length - 1].Date.ToShortDateString() : "No Programs"; *@
 }
 
-<div class="row align-items-center justify-content-center mt-5">
+<div class="home-body">
+    <div class="row align-items-center justify-content-center mt-5">
+        <div class="col-lg text-center mb-5">
+            <h1 class="display-4">Sacrament Meeting Planner</h1>
+            <br />
+            <p class="lead text-wrap fst-italic fw-light">
+                “That thou mayest more fully keep thyself unspotted from the world, thou shalt go to the house of prayer and offer up thy sacraments upon my holy day; for verily this is a day appointed unto you to rest from your labors, and to pay thy devotions unto the Most High” - D&C 59:9-10
+            </p>
+            <br />
+            <a class="text-light btn btn-primary mt-3" style="text-decoration: none;" asp-controller="SacramentMeetingPrograms" asp-action="Create">Create New Program</a>
+        </div>
+    </div>
 
-<div class="col-lg text-center mb-5">
-    <h1 class="display-4">Sacrament Meeting Planner</h1>
-    <br />
-    <p class="lead text-wrap fst-italic fw-light">
-        “That thou mayest more fully keep thyself unspotted from the world, thou shalt go to the house of prayer and offer up thy sacraments upon my holy day; for verily this is a day appointed unto you to rest from your labors, and to pay thy devotions unto the Most High” - D&C 59:9-10
-    </p>
-    <br />
-    <a class="text-light btn btn-primary mt-3" style="text-decoration: none;" asp-controller="SacramentMeetingPrograms" asp-action="Create">Create New Program</a>
-</div>
-
-</div>
-
-<div class="row mt-3 mb-5 text-center">
-    <div class="col card me-3 ">
-        <h3>Program Quick Links</h3>
-        @{
-            foreach (var item in items){
-              <a  asp-controller="SacramentMeetingPrograms"  asp-action="Details" asp-route-id="@item.SacramentMeetingProgramID">@item.Date.ToString("MMMM dd, yyyy")</a>
+    <div class="row mt-3 mb-5 text-center">
+        <div class="col card me-3 ">
+            <h3>Program Quick Links</h3>
+            @{
+                foreach (var item in items){
+                <a  asp-controller="SacramentMeetingPrograms"  asp-action="Details" asp-route-id="@item.SacramentMeetingProgramID">@item.Date.ToString("MMMM dd, yyyy")</a>
+                }
             }
-            
-        }
-    </div>
-    <div class="col text-center card">
-      <h3>Total Sacrament Meetings</h3>
-      <h1 class="m-3">@items.Length</h1>
-      <a  asp-controller="SacramentMeetingPrograms"  asp-action="Index">View all</a>
+        </div>
+        <div class="col text-center card">
+        <h3>Total Sacrament Meetings</h3>
+        <h1 class="m-3">@items.Length</h1>
+        <a  asp-controller="SacramentMeetingPrograms"  asp-action="Index">View all</a>
+        </div>
     </div>
 </div>
+<style>
+    body {
+        background-image : url('./church.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .home-body {
+        opacity: 0.9;
+    }
+</style>

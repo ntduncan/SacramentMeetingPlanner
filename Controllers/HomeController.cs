@@ -20,7 +20,12 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var sacramentMeetingPlannerContext =  _context.SacramentMeetingProgram.Include(s => s.ClosingHymn).Include(s => s.IntermediateHymn).Include(s => s.OpeningHymn).Include(s => s.SacramentHymn);
+        var sacramentMeetingPlannerContext =  _context.SacramentMeetingProgram
+        .Include(s => s.ClosingHymn)
+        .Include(s => s.IntermediateHymn)
+        .Include(s => s.OpeningHymn)
+        .Include(s => s.SacramentHymn)
+        .OrderByDescending(s => s.Date);
         
         ViewData["Programs"] = sacramentMeetingPlannerContext.ToListAsync();
         return View(await sacramentMeetingPlannerContext.ToListAsync());

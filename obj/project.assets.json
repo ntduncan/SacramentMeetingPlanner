@@ -9863,19 +9863,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/nathanduncan/.nuget/packages/": {}
+    "/Users/tanner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner.csproj",
+      "projectUniqueName": "/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/SacramentMeetingPlanner.csproj",
       "projectName": "SacramentMeetingPlanner",
-      "projectPath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner.csproj",
-      "packagesPath": "/Users/nathanduncan/.nuget/packages/",
-      "outputPath": "/Users/nathanduncan/Desktop/SacramentMeetingPlanner/obj/",
+      "projectPath": "/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/SacramentMeetingPlanner.csproj",
+      "packagesPath": "/Users/tanner/.nuget/packages/",
+      "outputPath": "/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nathanduncan/.nuget/NuGet/NuGet.Config"
+        "/Users/tanner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

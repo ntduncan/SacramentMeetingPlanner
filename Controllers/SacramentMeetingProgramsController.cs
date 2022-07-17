@@ -80,7 +80,7 @@ namespace SacramentMeetingPlanner.Controllers
                 foreach (var speaker in sacramentMeetingProgramViewModel.Speakers)
                 {
                     speaker.SacramentMeetingProgramID = sacramentMeetingProgramViewModel.SacramentMeetingProgram.SacramentMeetingProgramID;
-                    _context.Speaker.Add(sacramentMeetingProgramViewModel.Speakers[0]);
+                    _context.Speaker.Add(speaker);
 
                 }
                 await _context.SaveChangesAsync();
@@ -233,6 +233,7 @@ namespace SacramentMeetingPlanner.Controllers
             {
                 return Problem("Entity set 'SacramentMeetingPlannerContext.SacramentMeetingProgram'  is null.");
             }
+            Console.WriteLine(SacramentMeetingProgramExists(id));
             var sacramentMeetingProgram = await _context.SacramentMeetingProgram.FindAsync(id);
             if (sacramentMeetingProgram != null)
             {

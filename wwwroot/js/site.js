@@ -4,8 +4,8 @@
 // Write your JavaScript code.
 let index = 0;
 $("#AddSpeakerBtn").click(function () {
-    index++;
     $("#SpeakersDiv").append(addNewSpeaker(index));
+    index++;
 })
 function addNewSpeaker(index) {
     let speaker = "<div class='row'>"

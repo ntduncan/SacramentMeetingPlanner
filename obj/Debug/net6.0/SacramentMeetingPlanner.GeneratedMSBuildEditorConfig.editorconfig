@@ -8,77 +8,77 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SacramentMeetingPlanner
 build_property.RootNamespace = SacramentMeetingPlanner
-build_property.ProjectDir = /Users/nathanduncan/Desktop/SacramentMeetingPlanner/
+build_property.ProjectDir = /Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/nathanduncan/Desktop/SacramentMeetingPlanner
+build_property.MSBuildProjectDirectory = /Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Home/Index.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Home/Privacy.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Create.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Hymns/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Delete.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Hymns/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Details.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Hymns/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Edit.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Hymns/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Hymns/Index.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Hymns/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSHltbnMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Create.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Delete.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Details.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Edit.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Index.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/SacramentMeetingPrograms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FjcmFtZW50TWVldGluZ1Byb2dyYW1zL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/Error.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/_ViewImports.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/_ViewStart.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nathanduncan/Desktop/SacramentMeetingPlanner/Views/Shared/_Layout.cshtml]
+[/Users/tanner/Desktop/SacramentMeetingPlanner/SacramentMeetingPlanner/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nouse2mjmv

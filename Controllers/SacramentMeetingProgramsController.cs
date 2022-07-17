@@ -119,10 +119,10 @@ namespace SacramentMeetingPlanner.Controllers
                 return NotFound();
             }
 
-            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.ClosingHymnID);
-            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.IntermediateHymnID);
-            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.OpeningHymnID);
-            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "HymnID", sacramentMeetingProgram.SacramentHymnID);
+            ViewData["ClosingHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn", sacramentMeetingProgram.ClosingHymnID);
+            ViewData["IntermediateHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn", sacramentMeetingProgram.IntermediateHymnID);
+            ViewData["OpeningHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn", sacramentMeetingProgram.OpeningHymnID);
+            ViewData["SacramentHymnID"] = new SelectList(_context.Set<Hymn>(), "HymnID", "DisplayHymn", sacramentMeetingProgram.SacramentHymnID);
             
             return View(new SacramentMeetingPlannerViewModel()
             {

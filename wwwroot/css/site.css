@@ -24,3 +24,15 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   padding: 2em;
 }
+
+.dots{
+    border-bottom: 5px #333 dotted;
+}
+
+.program-padding{
+    margin-bottom: 10px;
+}
+
+.right{
+    text-align: right;
+}

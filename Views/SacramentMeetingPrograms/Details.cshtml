@@ -4,61 +4,80 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Program View</h1>
+<hr />
 
 <div>
-    <h4>SacramentMeetingProgram</h4>
+    <h1 class="text-center">
+        Sacrament Meeting - @Html.DisplayFor(model => model.DateDisplay)
+    </h1>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ConductingLeader)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ConductingLeader)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpeningPrayer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpeningPrayer)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ClosingPrayer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ClosingPrayer)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpeningHymn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpeningHymn.HymnID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ClosingHymn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ClosingHymn.HymnID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SacramentHymn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SacramentHymn.HymnID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IntermediateHymn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IntermediateHymn.HymnID)
-        </dd>
-    </dl>
+    <div class="container">
+        <div class="row program-padding">
+            <h4 class="col-md-4 right">@Html.DisplayNameFor(m => m.ConductingLeader)</h4>
+            <div class="col-md-4 dots"></div>
+            <h4 class="col-md-4">@Html.DisplayFor(m=>m.ConductingLeader)</h4>
+        </div>
+        <div class="row program-padding">
+            <h4 class="col-md-4 right">@Html.DisplayNameFor(m => m.OpeningHymnID)</h4>
+            <div class="col-md-4 dots"></div>
+            <h4 class="col-md-4">Page @Html.DisplayFor(m=>m.OpeningHymn.HymnNumber)</h4>
+            <p class="col-md-12 text-center">@Html.DisplayFor(m => m.OpeningHymn.HymnTitle)</p>
+        </div>
+        <div class="row program-padding">
+            <h4 class="col-md-4 right">@Html.DisplayNameFor(m => m.OpeningPrayer)</h4>
+            <div class="col-md-4 dots"></div>
+            <h4 class="col-md-4">@Html.DisplayFor(m=>m.OpeningPrayer)</h4>
+        </div>
+        <div class="row program-padding">
+            <h4 class="col-md-4 right">@Html.DisplayNameFor(m => m.SacramentHymnID)</h4>
+            <div class="col-md-4 dots"></div>
+            <h4 class="col-md-4">Page @Html.DisplayFor(m=>m.SacramentHymn.HymnNumber)</h4>
+            <p class="col-md-12 text-center">@Html.DisplayFor(m => m.SacramentHymn.HymnTitle)</p>
+        </div>
+
+        <h4 class="text-center program-padding">Passing of the Sacrament by the Aaronic Priesthood</h4>
+        @if (Model.Speakers.Count > 1)
+        {
+            for (int i = 0; i < Model.SpeakerLastIndex; i++)
+            {
+                <div class="row program-padding">
+                    <h4 class="col-md-4 right">@Html.DisplayFor(m => m.Speakers[i].Topic)</h4>
+                    <div class="col-md-4 dots"></div>
+                    <h4 class="col-md-4">@Html.DisplayFor(m=>m.Speakers[i].Name)</h4>
+                </div>
+            }
+
+        }
+        @if (Model.IntermediateHymn != null)
+        {
+            <div class="row program-padding">
+                <h4 class="col-md-4 right">@Html.DisplayNameFor(m => m.IntermediateHymnID)</h4>
+                <div class="col-md-4 dots"></div>
+                <h4 class="col-md-4">Page @Html.DisplayFor(m=>m.IntermediateHymn.HymnNumber)</h4>
+                <p class="col-md-12 text-center">@Html.DisplayFor(m => m.IntermediateHymn.HymnTitle)</p>
+            </div>
+        }
+        @if (Model.Speakers.Count >= 1)
+        {
+            <div class="row program-padding">
+                <h4 class="col-md-4 right">@Html.DisplayFor(m => m.Speakers[Model.SpeakerLastIndex].Topic)</h4>
+                <div class="col-md-4 dots"></div>
+                <h4 class="col-md-4">@Html.DisplayFor(m=>m.Speakers[Model.SpeakerLastIndex].Name)</h4>
+            </div>
+        }
+        <div class="row program-padding">
+            <h4 class="col-md-4 right">@Html.DisplayNameFor(m => m.ClosingHymnID)</h4>
+            <div class="col-md-4 dots"></div>
+            <h4 class="col-md-4">Page @Html.DisplayFor(m=>m.ClosingHymn.HymnNumber)</h4>
+            <p class="col-md-12 text-center">@Html.DisplayFor(m => m.ClosingHymn.HymnTitle)</p>
+        </div>
+         <div class="row program-padding">
+            <h4 class="col-md-4 right">@Html.DisplayNameFor(m => m.ClosingPrayer)</h4>
+            <div class="col-md-4 dots"></div>
+            <h4 class="col-md-4">@Html.DisplayFor(m=>m.ClosingPrayer)</h4>
+        </div>
+    </div>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.SacramentMeetingProgramID">Edit</a> |

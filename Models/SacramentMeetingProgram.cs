@@ -31,7 +31,7 @@ namespace SacramentMeetingPlanner.Models
         [StringLength(50, ErrorMessage = "Field cannot exceed 50 characters")]
         public String ClosingPrayer { get; set; }
 
-        public ICollection<Speaker>? Speakers { get; set; }
+        public List<Speaker>? Speakers { get; set; }
         
         [Required]
         [Display(Name = "Opening Hymn")]
@@ -50,6 +50,8 @@ namespace SacramentMeetingPlanner.Models
         [Display(Name = "Intermediate Hymn")]
         public int? IntermediateHymnID { get; set; }
         public Hymn? IntermediateHymn { get; set; }
+        public string DateDisplay => Date.ToString("MMMM dd, yyyy");
+        public int SpeakerLastIndex => Speakers.Count - 1;
 
     }
 }
